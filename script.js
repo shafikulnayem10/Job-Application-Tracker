@@ -9,7 +9,7 @@ let allCardSection = document.getElementById('allCards');
 let filterSection = document.getElementById('filtered-section');
 let mainContainer = document.querySelector('main');
 
-//count total jobs
+
 function calculateCount() {
     let totalJobs = allCardSection.children.length;
 
@@ -29,17 +29,18 @@ function calculateCount() {
 }
 
 calculateCount();
+
 function toggleStyle(id) {
 
-   let buttons = document.querySelectorAll('button');
+   let buttons = document.querySelectorAll('#filter-buttons button');
 
    for (let btn of buttons) {
     btn.classList.remove('bg-blue-600', 'text-white');
-    btn.classList.add('bg-gray-300', 'text-black');
+    btn.classList.add('bg-zinc-50', 'text-black');
     }
 
     const selected = document.getElementById(id);
-    selected.classList.remove('bg-gray-300', 'text-black');
+    selected.classList.remove('bg-zinc-50', 'text-black');
     selected.classList.add('bg-blue-600','text-white');
      currentStatus = id;
 
@@ -81,7 +82,17 @@ mainContainer.addEventListener('click', function (event) {
     if (event.target.classList.contains('interview-btn')) {
 
         
-        card.querySelector('.status').innerText = "Interview";
+        
+       card.querySelector('.status').innerText = "Interview";
+
+        const allCards = allCardSection.querySelectorAll('.card');
+
+      for (const c of allCards) {
+        const cCompany = c.querySelector('.company').innerText;
+        if (cCompany === company) {
+        c.querySelector('.status').innerText = "Interview";
+          }
+      }
 
        
         const alreadyExist = interviewList.find(job => job.company === company);
@@ -107,7 +118,18 @@ mainContainer.addEventListener('click', function (event) {
    
     else if (event.target.classList.contains('rejected-btn')) {
 
-        card.querySelector('.status').innerText = "Rejected";
+        
+      card.querySelector('.status').innerText = "Rejected";
+
+
+      const allCards = allCardSection.querySelectorAll('.card');
+
+      for (let  c of allCards) {
+         let Comp = c.querySelector('.company').innerText;
+           if (Comp === company) {
+             c.querySelector('.status').innerText = "Rejected";
+            }
+    }
 
         const alreadyExist = rejectedList.find(job => job.company === company);
 
@@ -172,23 +194,25 @@ function renderList(list) {
 
             div.innerHTML = `
              <div class="space-y-3">
-                <div>
-                    <p class="company text-xl font-bold">${job.company}</p>
-                    <p class="position">${job.position}</p>
-                </div>
-                <div class="flex gap-3">
-                    <p class="location bg-gray-200 px-3">${job.location}</p>
-                    <p class="type bg-gray-200 px-3">${job.type}</p>
-                </div>
-                <p class="salary">${job.salary}</p>
-                <p class="status">${job.status}</p>
-                <p class="description">${job.description}</p>
-                <div class="flex gap-4">
-                    <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                    <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
-                </div>
+            <div>
+                <p class="company text-xl font-bold">${job.company}</p>
+                <p class="position">${job.position}</p>
             </div>
-            <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">${job.location}</p>
+                <p class="type bg-gray-200 px-3">${job.type}</p>
+            </div>
+            <p class="salary">${job.salary}</p>
+             <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">${job.status}</p>
+            </div>
+            <p class="description">${job.description}</p>
+            <div class="flex gap-4">
+                 <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
+            </div>
+        </div>
+         <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
             `;
 
             filterSection.appendChild(div);

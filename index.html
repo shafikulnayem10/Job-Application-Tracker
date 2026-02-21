@@ -14,9 +14,9 @@
     <!-- tailwindcss cdn -->
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-gray-100 font-outfit py-10">
     <!-- header section start-->
-    <header class="w-[80%] mx-auto">
+    <header class="w-[80%] mx-auto bg-white p-6 rounded ">
         <h1 class="text-3xl font-bold text-gray-900 ">Job Application Tracker</h1>
         <div class = "grid grid-cols-3 gap-4 mt-10 ">
             <div>
@@ -55,11 +55,183 @@
         </div>
           <!-- Filtered section start -->
 
-        <section id="filtered-section" class="hidden">
+        <section id="filtered-section" class="hidden space-y-6">
 
         </section>
         <!-- Filtered section end -->
-         
+     <!-- all card section start -->
+<section id="allCards" class="space-y-6">
+
+    <!-- Card 1 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">Meta Tech Ltd</p>
+                <p class="position">Frontend Developer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Dhaka</p>
+                <p class="type bg-gray-200 px-3">Full Time</p>
+            </div>
+            <p class="salary">$60,000 - $80,000</p>
+            <p class="description">Develop and maintain responsive web applications using modern frontend technologies.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">InnovateX Solutions</p>
+                <p class="position">UI/UX Designer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Chattogram</p>
+                <p class="type bg-gray-200 px-3">Remote</p>
+            </div>
+            <p class="salary">$50,000 - $70,000</p>
+            <p class="description">Design user-friendly interfaces and improve user experience for web and mobile apps.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">TechNova</p>
+                <p class="position">Backend Developer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Sylhet</p>
+                <p class="type bg-gray-200 px-3">Full Time</p>
+            </div>
+            <p class="salary">$70,000 - $90,000</p>
+            <p class="description">Build scalable server-side applications and manage databases efficiently.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">Digital Hive</p>
+                <p class="position">React Developer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Dhaka</p>
+                <p class="type bg-gray-200 px-3">Contract</p>
+            </div>
+            <p class="salary">$55,000 - $75,000</p>
+            <p class="description">Create interactive UI components using React and Tailwind CSS.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">SkyNet Systems</p>
+                <p class="position">Full Stack Developer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Khulna</p>
+                <p class="type bg-gray-200 px-3">Full Time</p>
+            </div>
+            <p class="salary">$75,000 - $95,000</p>
+            <p class="description">Work on both frontend and backend to deliver complete web solutions.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">CodeCraft Ltd</p>
+                <p class="position">Junior Web Developer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Rajshahi</p>
+                <p class="type bg-gray-200 px-3">Internship</p>
+            </div>
+            <p class="salary">$30,000 - $40,000</p>
+            <p class="description">Assist in developing and maintaining websites under senior supervision.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">NextGen IT</p>
+                <p class="position">Angular Developer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Barishal</p>
+                <p class="type bg-gray-200 px-3">Remote</p>
+            </div>
+            <p class="salary">$65,000 - $85,000</p>
+            <p class="description">Develop enterprise-level applications using Angular framework.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card flex justify-between p-6 bg-white rounded">
+        <div class="space-y-3">
+            <div>
+                <p class="company text-xl font-bold">Bright Future Tech</p>
+                <p class="position">Software Engineer</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="location bg-gray-200 px-3">Dhaka</p>
+                <p class="type bg-gray-200 px-3">Full Time</p>
+            </div>
+            <p class="salary">$80,000 - $100,000</p>
+            <p class="description">Design, develop, and optimize software systems for high performance.</p>
+            <div class="flex gap-4">
+                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+            </div>
+        </div>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+    </div>
+
+</section>
+<!-- all card section end -->
 
          
 

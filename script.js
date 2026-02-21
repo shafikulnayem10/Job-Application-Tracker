@@ -11,7 +11,7 @@ let mainContainer = document.querySelector('main');
 
 //count total jobs
 function calculateCount() {
-    const totalJobs = allCardSection.children.length;
+    let totalJobs = allCardSection.children.length;
 
     total.innerText = totalJobs;
     interviewCount.innerText = interviewList.length;
@@ -31,15 +31,15 @@ function calculateCount() {
 calculateCount();
 function toggleStyle(id) {
 
-   const buttons = document.querySelectorAll('button');
+   let buttons = document.querySelectorAll('button');
 
-   for (const btn of buttons) {
+   for (let btn of buttons) {
     btn.classList.remove('bg-blue-600', 'text-white');
-    btn.classList.add('bg-gray-300');
+    btn.classList.add('bg-gray-300', 'text-black');
     }
 
     const selected = document.getElementById(id);
-    selected.classList.remove('bg-gray-300');
+    selected.classList.remove('bg-gray-300', 'text-black');
     selected.classList.add('bg-blue-600','text-white');
      currentStatus = id;
 
@@ -60,10 +60,7 @@ function toggleStyle(id) {
 
 }
 
-function renderList(list) {
-    filterSection.classList.remove('hidden');
-    filterSection.innerHTML = '<h1 >hello</h1>';
-}
+
 
 mainContainer.addEventListener('click', function (event) {
 
@@ -76,6 +73,10 @@ mainContainer.addEventListener('click', function (event) {
     const company = card.querySelector('.company').innerText;
     const position = card.querySelector('.position').innerText;
     const salary = card.querySelector('.salary').innerText;
+    const location = card.querySelector('.location').innerText;
+    const type = card.querySelector('.type').innerText;
+    const description = card.querySelector('.description').innerText;
+   
 
     if (event.target.classList.contains('interview-btn')) {
 
@@ -90,7 +91,10 @@ mainContainer.addEventListener('click', function (event) {
                 company: company,
                 position: position,
                 salary: salary,
-                status: "Interview"
+                status: "Interview",
+                location: location,
+                type: type,
+                description: description
             });
         }
 
@@ -112,7 +116,10 @@ mainContainer.addEventListener('click', function (event) {
                 company: company,
                 position: position,
                 salary: salary,
-                status: "Rejected"
+                status: "Rejected",
+                location: location,
+                type: type,
+                description: description
             });
         }
 
@@ -146,6 +153,48 @@ mainContainer.addEventListener('click', function (event) {
 
 });
 function renderList(list) {
+
+    filterSection.innerHTML = '';
+
+    if (list.length === 0) {
+        filterSection.innerHTML = `
+            <div class="text-center mt-20">
+                <img class="mx-auto" src="./jobs.png" alt="No Jobs" width="100">
+                <h2 class="text-xl font-bold mt-4">No Jobs Available</h2>
+            </div>
+        `;
+    }
+    else {
+        for (const job of list) {
+
+            let div = document.createElement('div');
+            div.className = 'card flex justify-between p-6 bg-white rounded';
+
+            div.innerHTML = `
+             <div class="space-y-3">
+                <div>
+                    <p class="company text-xl font-bold">${job.company}</p>
+                    <p class="position">${job.position}</p>
+                </div>
+                <div class="flex gap-3">
+                    <p class="location bg-gray-200 px-3">${job.location}</p>
+                    <p class="type bg-gray-200 px-3">${job.type}</p>
+                </div>
+                <p class="salary">${job.salary}</p>
+                <p class="status">${job.status}</p>
+                <p class="description">${job.description}</p>
+                <div class="flex gap-4">
+                    <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
+                    <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                </div>
+            </div>
+            <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+            `;
+
+            filterSection.appendChild(div);
+        }
+    }
+
     filterSection.classList.remove('hidden');
-    filterSection.innerHTML = '<h1 >hello</h1>';
+    calculateCount();
 }

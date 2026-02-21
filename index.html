@@ -16,20 +16,20 @@
 </head>
 <body class="bg-gray-100 font-outfit py-10">
     <!-- header section start-->
-    <header class="w-[80%] mx-auto bg-white p-6 rounded ">
+    <header class="w-[80%] mx-auto bg-gray-100 p-6 rounded ">
         <h1 class="text-3xl font-bold text-gray-900 ">Job Application Tracker</h1>
         <div class = "grid grid-cols-3 gap-4 mt-10 ">
-               <div class="bg-gray-200 p-4 rounded">
+          <div class="bg-zinc-50 p-4 rounded">
             <p>Total</p>
             <p id="total" class="text-black">0</p>
-        </div>
+         </div>
 
-        <div class="bg-green-200 p-4 rounded">
+        <div class="bg-zinc-50 p-4 rounded">
             <p>Interview</p>
-            <p id="interviewCount" class="text-blue-600">0</p>
+            <p id="interviewCount" class="text-green-600">0</p>
         </div>
 
-        <div class="bg-red-200 p-4 rounded">
+        <div class="bg-zinc-50 p-4 rounded">
             <p>Rejected</p>
             <p id="rejectedCount" class="text-red-700">0</p>
         </div>
@@ -88,14 +88,16 @@
                 <p class="type bg-gray-200 px-3">Full Time</p>
             </div>
             <p class="salary">$60,000 - $80,000</p>
-             <p class="status">Not Applied</p>
+            <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Develop and maintain responsive web applications using modern frontend technologies.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
     <!-- Card 2 -->
@@ -110,14 +112,16 @@
                 <p class="type bg-gray-200 px-3">Remote</p>
             </div>
             <p class="salary">$50,000 - $70,000</p>
-             <p class="status">Not Applied</p>
+             <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Design user-friendly interfaces and improve user experience for web and mobile apps.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                  <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
     <!-- Card 3 -->
@@ -132,14 +136,16 @@
                 <p class="type bg-gray-200 px-3">Full Time</p>
             </div>
             <p class="salary">$70,000 - $90,000</p>
-             <p class="status">Not Applied</p>
+             <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Build scalable server-side applications and manage databases efficiently.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
     <!-- Card 4 -->
@@ -154,14 +160,16 @@
                 <p class="type bg-gray-200 px-3">Contract</p>
             </div>
             <p class="salary">$55,000 - $75,000</p>
-             <p class="status">Not Applied</p>
+             <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Create interactive UI components using React and Tailwind CSS.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                 <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+       <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
     <!-- Card 5 -->
@@ -176,14 +184,16 @@
                 <p class="type bg-gray-200 px-3">Full Time</p>
             </div>
             <p class="salary">$75,000 - $95,000</p>
-             <p class="status">Not Applied</p>
+             <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Work on both frontend and backend to deliver complete web solutions.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                 <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+         <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
     <!-- Card 6 -->
@@ -198,14 +208,16 @@
                 <p class="type bg-gray-200 px-3">Internship</p>
             </div>
             <p class="salary">$30,000 - $40,000</p>
-            <p class="status">Not Applied</p>
+            <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Assist in developing and maintaining websites under senior supervision.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
     <!-- Card 7 -->
@@ -220,14 +232,16 @@
                 <p class="type bg-gray-200 px-3">Remote</p>
             </div>
             <p class="salary">$65,000 - $85,000</p>
-             <p class="status">Not Applied</p>
+            <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Develop enterprise-level applications using Angular framework.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                 <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+         <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
     <!-- Card 8 -->
@@ -242,14 +256,16 @@
                 <p class="type bg-gray-200 px-3">Full Time</p>
             </div>
             <p class="salary">$80,000 - $100,000</p>
-             <p class="status">Not Applied</p>
+              <div class=" bg-blue-400 d-inline-block px-3 py-1 rounded-full w-fit">
+                 <p class="status  text-blue-900">Not Applied</p>
+            </div>
             <p class="description">Design, develop, and optimize software systems for high performance.</p>
             <div class="flex gap-4">
-                <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                 <button class="interview-btn bg-green-200 px-4 py-2 rounded-full">Interview</button>
+                <button class="rejected-btn bg-red-200 px-4 py-2 rounded-full">Rejected</button>
             </div>
         </div>
-        <button class="btn-delete bg-red-200 px-4 py-2 h-fit">Delete</button>
+        <button class="btn-delete bg-red-200 px-4 py-2 h-fit rounded-full">Delete</button>
     </div>
 
 </section>

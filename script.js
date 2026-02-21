@@ -60,7 +60,10 @@ function toggleStyle(id) {
 
 }
 
-
+function renderList(list) {
+    filterSection.classList.remove('hidden');
+    filterSection.innerHTML = '<h1 >hello</h1>';
+}
 
 mainContainer.addEventListener('click', function (event) {
 

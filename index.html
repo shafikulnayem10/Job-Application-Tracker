@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <!-- google font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- external css -->
+<link rel="stylesheet" href="style.css">
+    <!-- tailwindcss cdn -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- header section start-->
+    <header class="w-[80%] mx-auto">
+        <h1 class="text-3xl font-bold text-gray-900 ">Job Application Tracker</h1>
+        <div class = "grid grid-cols-3 gap-4 mt-10 ">
+            <div>
+                <p class="font-semibold text-gray-600">
+                    Total
+                </p>
+                <p class="text-gray-950">0</p>
+
+            </div>
+             <div>
+                <p class="font-semibold text-gray-600">
+                   Interview
+                </p>
+                <p class="text-green-500">0</p>
+
+            </div>
+             <div>
+                <p class="font-semibold text-gray-600">
+                    Rejected
+                </p>
+                <p class="text-red-900">0</p>
+
+            </div>
+            
+        </div>
+
+    </header>
+    <!-- header section end  -->
+    <!-- main section start -->
+     <main class="w-[80%] mx-auto">
+        <h2 class="text-2xl font-semibold text-gray-800">Available Jobs</h2>
+        <div class="mb-6">
+            <button  class="bg-blue-600 text-white px-5 py-2 rounded-full" >All</button>
+            <button  class="bg-gray-300 px-5 py-2 rounded-full" >Interview</button>
+            <button  class="bg-gray-300 px-5 py-2 rounded-full" >Rejected</button>
+        </div>
+         
+
+
+     </main>
+</body>
+</html>

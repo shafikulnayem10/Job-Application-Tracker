@@ -48,11 +48,25 @@
         <p id="sectionCount">0 jobs</p>
     </div>
     <!-- section count header end -->
-        <div class="mb-6">
-            <button  class="bg-blue-600 text-white px-5 py-2 rounded-full" >All</button>
-            <button  class="bg-gray-300 px-5 py-2 rounded-full" >Interview</button>
-            <button  class="bg-gray-300 px-5 py-2 rounded-full" >Rejected</button>
-        </div>
+        <div class="mb-6 flex gap-3 flex-wrap">
+        <button onclick="toggleStyle('all-filter-btn')" 
+            id="all-filter-btn"
+            class="bg-blue-600 text-white px-5 py-2 rounded">
+            All
+        </button>
+
+        <button onclick="toggleStyle('interview-filter-btn')" 
+            id="interview-filter-btn"
+            class="bg-white-600 text-black px-5 py-2 rounded">
+            Interview
+        </button>
+
+        <button onclick="toggleStyle('rejected-filter-btn')" 
+            id="rejected-filter-btn"
+            class="bg-white-600 text-black px-5 py-2 rounded">
+            Rejected
+        </button>
+    </div>
           <!-- Filtered section start -->
 
         <section id="filtered-section" class="hidden space-y-6">

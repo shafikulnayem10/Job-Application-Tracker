@@ -39,7 +39,7 @@ function toggleStyle(id) {
     btn.classList.add('bg-zinc-50', 'text-black');
     }
 
-    const selected = document.getElementById(id);
+    let selected = document.getElementById(id);
     selected.classList.remove('bg-zinc-50', 'text-black');
     selected.classList.add('bg-blue-600','text-white');
      currentStatus = id;
@@ -66,17 +66,17 @@ function toggleStyle(id) {
 mainContainer.addEventListener('click', function (event) {
 
     
-    const card = event.target.closest('.card');
+    let card = event.target.closest('.card');
     if (!card){
         return;
     }
     
-    const company = card.querySelector('.company').innerText;
-    const position = card.querySelector('.position').innerText;
-    const salary = card.querySelector('.salary').innerText;
-    const location = card.querySelector('.location').innerText;
-    const type = card.querySelector('.type').innerText;
-    const description = card.querySelector('.description').innerText;
+    let company = card.querySelector('.company').innerText;
+    let position = card.querySelector('.position').innerText;
+    let salary = card.querySelector('.salary').innerText;
+    let location = card.querySelector('.location').innerText;
+    let type = card.querySelector('.type').innerText;
+    let description = card.querySelector('.description').innerText;
    
 
     if (event.target.classList.contains('interview-btn')) {
@@ -85,17 +85,17 @@ mainContainer.addEventListener('click', function (event) {
         
        card.querySelector('.status').innerText = "Interview";
 
-        const allCards = allCardSection.querySelectorAll('.card');
+       let allCards = allCardSection.querySelectorAll('.card');
 
-      for (const c of allCards) {
-        const cCompany = c.querySelector('.company').innerText;
+      for (let c of allCards) {
+         let cCompany = c.querySelector('.company').innerText;
         if (cCompany === company) {
         c.querySelector('.status').innerText = "Interview";
           }
       }
 
        
-        const alreadyExist = interviewList.find(job => job.company === company);
+      let alreadyExist = interviewList.find(job => job.company === company);
 
         if (!alreadyExist) {
             interviewList.push({
@@ -122,16 +122,16 @@ mainContainer.addEventListener('click', function (event) {
       card.querySelector('.status').innerText = "Rejected";
 
 
-      const allCards = allCardSection.querySelectorAll('.card');
+      let allCards = allCardSection.querySelectorAll('.card');
 
       for (let  c of allCards) {
-         let Comp = c.querySelector('.company').innerText;
-           if (Comp === company) {
+         let cComp = c.querySelector('.company').innerText;
+           if (cComp === company) {
              c.querySelector('.status').innerText = "Rejected";
             }
     }
 
-        const alreadyExist = rejectedList.find(job => job.company === company);
+        let alreadyExist = rejectedList.find(job => job.company === company);
 
         if (!alreadyExist) {
             rejectedList.push({
@@ -152,16 +152,36 @@ mainContainer.addEventListener('click', function (event) {
 
 
 
-    else if (event.target.classList.contains('btn-delete')) {
+ else if (event.target.classList.contains('btn-delete')) {
+
+    
+    interviewList = interviewList.filter(job => job.company !== company);
+    rejectedList = rejectedList.filter(job => job.company !== company);
+
+    
+    if (!allCardSection.classList.contains('hidden')) {
+        card.remove();
+    }
+
+    
+    else {
+        
+        const allCards = allCardSection.querySelectorAll('.card');
+
+        for (let c of allCards) {
+            let cCom = c.querySelector('.company').innerText;
+
+            if (cCom === company) {
+                c.querySelector('.status').innerText = "Not Applied";
+            }
+        }
 
         
-        interviewList = interviewList.filter(job => job.company !== company);
-        rejectedList = rejectedList.filter(job => job.company !== company);
-
         card.remove();
-
-        calculateCount();
     }
+
+    calculateCount();
+}
 
 
   
@@ -187,7 +207,7 @@ function renderList(list) {
         `;
     }
     else {
-        for (const job of list) {
+        for (let job of list) {
 
             let div = document.createElement('div');
             div.className = 'card flex justify-between p-6 bg-white rounded';
